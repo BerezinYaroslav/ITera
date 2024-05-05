@@ -13,7 +13,7 @@
 
 ## Документация
 * Техническое задание [(docx)]() [(pdf)]()
-* Swagger [(в разработке)] ()
+* Swagger [(в разработке)]()
 
 ## Демонстрация экранов
 ![Курсы](https://github.com/BerezinYaroslav/ITera/blob/master/img/courses.jpeg)
