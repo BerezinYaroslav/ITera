@@ -6,7 +6,7 @@
 * Анна Сафонова [(Tg)](https://t.me/don_karnagee) - Designer
 
 ## Тема
-Приложение для создания и управления личными или профессиональными целями, с напоминаниями и отслеживанием прогресса.
+Приложение для создания и прохождения персонализированных курсов со встроенной полноценной LMS
 
 ## Сервисы
 * [Figma](https://www.figma.com/file/EM8BhC3EO0E5flz4RoeKw5/Itera?type=design&node-id=0-1&mode=design&t=wbLZY8yAykkoqOUs-0)
