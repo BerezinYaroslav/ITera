@@ -16,6 +16,7 @@ public class EmployeeProfileDto {
     private Long id;
     private String name;
     private String role;
+    private LocalDate birthday;
     private LocalDate creationDate;
     private Integer subordinatesCount;
     private String fullName;

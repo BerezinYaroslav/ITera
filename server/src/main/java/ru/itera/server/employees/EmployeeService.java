@@ -28,5 +28,5 @@ public interface EmployeeService {
 
     void deleteAll();
 
-    EmployeeProfileDto getEmployeeInfo(Long id) throws Exception;
+    EmployeeProfileDto getEmployeeProfile(Long id) throws Exception;
 }

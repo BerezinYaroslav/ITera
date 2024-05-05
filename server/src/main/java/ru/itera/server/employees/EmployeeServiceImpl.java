@@ -114,7 +114,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeRepository.deleteAll();
     }
 
-    public EmployeeProfileDto getEmployeeInfo(Long id) throws Exception {
+    public EmployeeProfileDto getEmployeeProfile(Long id) throws Exception {
         Employee employee = getById(id);
 
         return EmployeeProfileDto.builder()
@@ -123,6 +123,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .role(employee.getRoleId().equals(1L) ? "Преподаватель" : "Куратор")
                 .creationDate(employee.getCreationDate())
                 .subordinatesCount(5)
+                .birthday(employee.getBirthday())
                 .fullName(employee.getFullName())
                 .office(employee.getOffice())
                 .education(employee.getEducation())

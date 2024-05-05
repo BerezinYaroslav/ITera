@@ -38,7 +38,7 @@ public class EmployeeController {
 
     @GetMapping("/dto/{id}")
     public EmployeeProfileDto getEmployeeInfo(@PathVariable long id) throws Exception {
-        return employeeService.getEmployeeInfo(id);
+        return employeeService.getEmployeeProfile(id);
     }
 
     @GetMapping("/{id}")

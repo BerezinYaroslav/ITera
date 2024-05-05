@@ -25,14 +25,14 @@ create table employee
     speciality           nvarchar(100),
     phone_number         nvarchar(20),
     extra_phone_number   nvarchar(20),
-    email                nvarchar(50) unique,
+    email                nvarchar(50),
     living_state         nvarchar(100),
     living_city          nvarchar(50),
     living_address       nvarchar(100),
     registration_state   nvarchar(100),
     registration_city    nvarchar(50),
     registration_address nvarchar(100),
-    creation_date        date,
+    creation_date        date         not null,
     last_update_date     date,
     creator_id           bigint references employee (id),
     is_deleted           boolean
@@ -41,7 +41,7 @@ create table employee
 create table course
 (
     id               bigint generated always as identity primary key,
-    name             nvarchar(50) unique not null,
+    name             nvarchar(50) not null,
     description      nvarchar(500),
     presentation_url nvarchar(100),
     methodology_url  nvarchar(100),
@@ -87,7 +87,7 @@ create table student_course
 create table payment
 (
     id               bigint generated always as identity primary key,
-    sum              double,
+    sum              double not null,
     student_id       bigint references student (id),
     creation_date    date,
     last_update_date date,

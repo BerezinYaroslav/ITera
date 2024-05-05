@@ -1,0 +1,840 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "description": "Documentation \"ITera\" API v1.0",
+    "title": "\"ITera\" API сервер",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "description": "Generated server url",
+      "url": "http://localhost:8080"
+    }
+  ],
+  "tags": [
+    {
+      "description": "Публичный API для работы с сотрудниками",
+      "name": "Public: Сотрудники"
+    },
+    {
+      "description": "Публичный API для работы с учениками",
+      "name": "Public: Ученики"
+    },
+    {
+      "description": "Публичный API для работы с курсами",
+      "name": "Public: Курсы"
+    },
+    {
+      "description": "Публичный API для работы с оплатами",
+      "name": "Public: Оплаты"
+    }
+  ],
+
+
+
+  
+  "paths": {
+    "/employees": {
+      "post": {
+        "description": "При успешном создании ничего не возвращает, только код ответа",
+        "operationId": "postEmployees",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/employee"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {},
+            "description": "Сотрудник создан"
+          }
+        },
+        "summary": "Создание сотрудника",
+        "tags": [
+          "Public: Сотрудники"
+        ]
+      }
+    },
+    "/employees/dto": {
+      "get": {
+        "description": "В случае, если созданных сотрудников нет, возвращает пустой список",
+        "operationId": "getEmployeesDto",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/employeeDto"
+                  }
+                }
+              }
+            },
+            "description": "Получены сотрудники"
+          }
+        },
+        "summary": "Получение списка сотрудников",
+        "tags": [
+          "Public: Сотрудники"
+        ]
+      }
+    },
+    "/employees/dto/{id}": {
+      "get": {
+        "description": "В случае, если сотрудника с заданным id не найдено, возвращает код ошибки",
+        "operationId": "getEmployeeDto",
+        "parameters": [
+          {
+            "description": "id сотрудника",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "format": "long"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/employeeProfileDto"
+                }
+              }
+            },
+            "description": "Найден сотрудник"
+          }
+        },
+        "summary": "Получение сотрдуника по его id",
+        "tags": [
+          "Public: Сотрудники"
+        ]
+      }
+    },
+    "/employees/{id}/students": {
+      "get": {
+        "description": "В случае, если у сотрудника с заданным id нет учеников, возвращает пустой список",
+        "operationId": "getEmployeesStudents",
+        "parameters": [
+          {
+            "description": "id сотрудника",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "format": "long"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/employeeStudentDto"
+                  }
+                }
+              }
+            },
+            "description": "Найден сотрудник"
+          }
+        },
+        "summary": "Получение сотрдуника по его id",
+        "tags": [
+          "Public: Сотрудники"
+        ]
+      }
+    },
+    "/students/dto": {
+      "get": {
+        "description": "В случае, если созданных учеников нет, возвращает пустой список",
+        "operationId": "getStudents",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/studentDto"
+                  }
+                }
+              }
+            },
+            "description": "Получены ученики"
+          }
+        },
+        "summary": "Получение списка учеников",
+        "tags": [
+          "Public: Ученики"
+        ]
+      }
+    },
+    "/students/{id}/courses": {
+      "get": {
+        "description": "В случае, если курсов у ученика нет, возвращает пустой список",
+        "operationId": "getStudentCourses",
+        "parameters": [
+          {
+            "description": "id ученика",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "format": "long"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/studentCourseDto"
+                  }
+                }
+              }
+            },
+            "description": "Получены курсы ученика"
+          }
+        },
+        "summary": "Получение списка курсов ученика",
+        "tags": [
+          "Public: Ученики"
+        ]
+      }
+    },
+    "/courses/dto": {
+      "get": {
+        "description": "В случае, если созданных курсов нет, возвращает пустой список",
+        "operationId": "getCourses",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/courseDto"
+                  }
+                }
+              }
+            },
+            "description": "Получены курсы"
+          }
+        },
+        "summary": "Получение списка курсов",
+        "tags": [
+          "Public: Курсы"
+        ]
+      }
+    },
+    "/payments/dto": {
+      "get": {
+        "description": "В случае, если созданных платежей нет, возвращает пустой список",
+        "operationId": "getPayments",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/paymentDto"
+                  }
+                }
+              }
+            },
+            "description": "Получены курсы"
+          }
+        },
+        "summary": "Получение списка курсов",
+        "tags": [
+          "Public: Оплаты"
+        ]
+      }
+    }
+  },
+
+
+
+
+  "components": {
+    "schemas": {
+      "employee": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "Идентификатор сотрудника",
+            "format": "bigint",
+            "readOnly": true,
+            "example": 1
+          },
+          "name": {
+            "maxLength": 50,
+            "type": "string",
+            "description": "Имя",
+            "example": "Исаченко Богдан"
+          },
+          "roleId": {
+            "type": "number",
+            "description": "Идентификатор роли",
+            "format": "bigint",
+            "example": 1
+          },
+          "fullName": {
+            "maxLength": 50,
+            "type": "string",
+            "description": "Полное имя",
+            "example": "Исаченко Богдан Вячеславович"
+          },
+          "birthday": {
+            "type": "string",
+            "description": "Дата рождения",
+            "format": "date",
+            "example": "2003-01-01"
+          },
+          "office": {
+            "maxLength": 50,
+            "type": "string",
+            "description": "Название филиала",
+            "example": "Калинка"
+          },
+          "education": {
+            "maxLength": 50,
+            "type": "string",
+            "description": "Степень образования",
+            "example": "Высшее"
+          },
+          "universityName": {
+            "maxLength": 100,
+            "type": "string",
+            "description": "Название университета",
+            "example": "Воронежский Государственный Университет"
+          },
+          "speciality": {
+            "maxLength": 100,
+            "type": "string",
+            "description": "Специализация обучения",
+            "example": "Менеджемент"
+          },
+          "phoneNumber": {
+            "maxLength": 20,
+            "type": "string",
+            "description": "Номер телефона",
+            "example": "89801112233"
+          },
+          "extraPhoneNumber": {
+            "maxLength": 20,
+            "type": "string",
+            "description": "Дополнительный номер телефона",
+            "example": "89801112233"
+          },
+          "email": {
+            "maxLength": 50,
+            "type": "string",
+            "description": "Электронная почта",
+            "example": "isachenko@mail.ru"
+          },
+          "livingState": {
+            "maxLength": 100,
+            "type": "string",
+            "description": "Регион проживания",
+            "example": "Воронежская область"
+          },
+          "livingCity": {
+            "maxLength": 50,
+            "type": "string",
+            "description": "Город проживания",
+            "example": "Воронеж"
+          },
+          "livingAddress": {
+            "maxLength": 100,
+            "type": "string",
+            "description": "Адрес проживания",
+            "example": "ул.Шишкова, д.1"
+          },
+          "registrationState": {
+            "maxLength": 100,
+            "type": "string",
+            "description": "Регион прописки",
+            "example": "Воронежская область"
+          },
+          "registrationCity": {
+            "maxLength": 50,
+            "type": "string",
+            "description": "Город прописки",
+            "example": "Воронеж"
+          },
+          "registrationAddress": {
+            "maxLength": 100,
+            "type": "string",
+            "description": "Адрес прописки",
+            "example": "ул. Шишкова, д.1"
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Дата создания",
+            "example": "2024-01-01"
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Дата последнего обновления",
+            "example": "2024-01-01"
+          },
+          "creatorId": {
+            "type": "number",
+            "format": "bigint",
+            "description": "Индетификатор создателя",
+            "example": 1
+          },
+          "isDeleted": {
+            "type": "boolean",
+            "description": "Удален ли",
+            "example": false
+          }
+        },
+        "description": "Сотрудник"
+      },
+      "employeeProfileDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "Идентификатор сотрудника",
+            "format": "bigint",
+            "readOnly": true,
+            "example": 1
+          },
+          "name": {
+            "type": "string",
+            "description": "Имя",
+            "example": "Исаченко Богдан"
+          },
+          "role": {
+            "type": "string",
+            "description": "Роль",
+            "example": "Преподаватель"
+          },
+          "fullName": {
+            "type": "string",
+            "description": "Полное имя",
+            "example": "Исаченко Богдан Вячеславович"
+          },
+          "birthday": {
+            "type": "string",
+            "description": "Дата рождения",
+            "format": "date",
+            "example": "2003-01-01"
+          },
+          "subordinatesCount": {
+            "type": "number",
+            "format": "int64",
+            "description": "Количество курируемых учеников",
+            "example": 1
+          },
+          "office": {
+            "type": "string",
+            "description": "Название филиала",
+            "example": "Калинка"
+          },
+          "education": {
+            "type": "string",
+            "description": "Степень образования",
+            "example": "Высшее"
+          },
+          "universityName": {
+            "type": "string",
+            "description": "Название университета",
+            "example": "Воронежский Государственный Университет"
+          },
+          "speciality": {
+            "type": "string",
+            "description": "Специализация обучения",
+            "example": "Менеджемент"
+          },
+          "phoneNumber": {
+            "type": "string",
+            "description": "Номер телефона",
+            "example": "89801112233"
+          },
+          "extraPhoneNumber": {
+            "type": "string",
+            "description": "Дополнительный номер телефона",
+            "example": "89801112233"
+          },
+          "email": {
+            "type": "string",
+            "description": "Электронная почта",
+            "example": "isachenko@mail.ru"
+          },
+          "livingState": {
+            "type": "string",
+            "description": "Регион проживания",
+            "example": "Воронежская область"
+          },
+          "livingCity": {
+            "type": "string",
+            "description": "Город проживания",
+            "example": "Воронеж"
+          },
+          "livingAddress": {
+            "type": "string",
+            "description": "Адрес проживания",
+            "example": "ул.Шишкова, д.1"
+          },
+          "registrationState": {
+            "type": "string",
+            "description": "Регион прописки",
+            "example": "Воронежская область"
+          },
+          "registrationCity": {
+            "type": "string",
+            "description": "Город прописки",
+            "example": "Воронеж"
+          },
+          "registrationAddress": {
+            "type": "string",
+            "description": "Адрес прописки",
+            "example": "ул. Шишкова, д.1"
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Дата создания",
+            "example": "2024-01-01"
+          }
+        },
+        "description": "Профиль сотрудника"
+      },
+      "employeeDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "Идентификатор сотрудника",
+            "format": "bigint",
+            "readOnly": true,
+            "example": 1
+          },
+          "name": {
+            "type": "string",
+            "description": "Имя",
+            "example": "Исаченко Богдан"
+          },
+          "role": {
+            "type": "string",
+            "description": "Роль",
+            "example": 1
+          },
+          "subordinatesCount": {
+            "type": "number",
+            "format": "int64",
+            "description": "Количество курируемых учеников",
+            "example": 1
+          }
+        },
+        "description": "Сотрудник DTO"
+      },
+      "employeeStudentDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "Идентификатор ученика",
+            "format": "bigint",
+            "readOnly": true,
+            "example": 1
+          },
+          "name": {
+            "type": "string",
+            "description": "Имя",
+            "example": "Исаченко Богдан"
+          },
+          "groupName": {
+            "type": "string",
+            "description": "Название группы",
+            "example": "Python Start"
+          },
+          "classesCount": {
+            "type": "number",
+            "format": "int64",
+            "description": "Общее количество уроков",
+            "example": 1
+          },
+          "visitedClassesCount": {
+            "type": "number",
+            "format": "int64",
+            "description": "Количество пройденных уроков",
+            "example": 1
+          },
+          "payedClassesCount": {
+            "type": "number",
+            "format": "int64",
+            "description": "Количество оплаченных уроков",
+            "example": 1
+          }
+        },
+        "description": "Ученики преподавателя"
+      },
+      "student": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "Идентификатор ученика",
+            "format": "bigint",
+            "readOnly": true,
+            "example": 1
+          },
+          "name": {
+            "maxLength": 50,
+            "type": "string",
+            "description": "Имя",
+            "example": "Исаченко Богдан"
+          },
+          "birthday": {
+            "type": "string",
+            "description": "Дата рождения",
+            "format": "date",
+            "example": "2003-01-01"
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Дата создания",
+            "example": "2024-01-01"
+          },
+          "lastUpdateDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Дата последнего обновления",
+            "example": "2024-01-01"
+          },
+          "creatorId": {
+            "type": "number",
+            "format": "bigint",
+            "description": "Индетификатор создателя",
+            "example": 1
+          },
+          "isDeleted": {
+            "type": "boolean",
+            "description": "Удален ли",
+            "example": false
+          }
+        },
+        "description": "Ученик"
+      },
+      "studentDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "Идентификатор ученика",
+            "format": "bigint",
+            "readOnly": true,
+            "example": 1
+          },
+          "name": {
+            "type": "string",
+            "description": "Имя",
+            "example": "Исаченко Богдан"
+          },
+          "birthday": {
+            "type": "string",
+            "description": "Дата рождения",
+            "format": "date",
+            "example": "2003-01-01"
+          },
+          "coursesCount": {
+            "type": "number",
+            "format": "int64",
+            "description": "Общее количество курсов",
+            "example": 1
+          },
+          "activeCoursesCount": {
+            "type": "number",
+            "format": "int64",
+            "description": "Количество активных курсов",
+            "example": 1
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Дата создания",
+            "example": "2024-01-01"
+          },
+          "hasDebt": {
+            "type": "boolean",
+            "description": "Есть ли долги",
+            "example": false
+          }
+        },
+        "description": "Ученик DTO"
+      },
+      "studentCourseDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "Идентификатор ученика",
+            "format": "bigint",
+            "readOnly": true,
+            "example": 1
+          },
+          "courseName": {
+            "type": "string",
+            "description": "Курс",
+            "example": "Python Start"
+          },
+          "teacherName": {
+            "type": "string",
+            "description": "Преподаватель",
+            "example": "Исаченко Богдан"
+          },
+          "classesCount": {
+            "type": "number",
+            "format": "int64",
+            "description": "Общее количество уроков",
+            "example": 1
+          },
+          "visitedClassesCount": {
+            "type": "number",
+            "format": "int64",
+            "description": "Количество пройденных уроков",
+            "example": 1
+          },
+          "payedClassesCount": {
+            "type": "number",
+            "format": "int64",
+            "description": "Количество оплаченных уроков",
+            "example": 1
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Дата создания",
+            "example": "2024-01-01"
+          },
+          "status": {
+            "type": "string",
+            "description": "Статус",
+            "example": "Активна"
+          }
+        },
+        "description": "Курсы ученика"
+      },
+      "courseDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "Идентификатор ученика",
+            "format": "bigint",
+            "readOnly": true,
+            "example": 1
+          },
+          "name": {
+            "type": "string",
+            "description": "Название курса",
+            "example": "Python Start"
+          },
+          "classesCount": {
+            "type": "number",
+            "format": "int64",
+            "description": "Общее количество уроков",
+            "example": 1
+          },
+          "presentationUrl": {
+            "type": "string",
+            "description": "Ссылка на презентацию",
+            "example": "http://google.com"
+          },
+          "methodologyUrl": {
+            "type": "string",
+            "description": "Ссылка на методические указания",
+            "example": "http://google.com"
+          },
+          "exercisesUrl": {
+            "type": "string",
+            "description": "Ссылка на задания",
+            "example": "http://google.com"
+          }
+        },
+        "description": "Курс DTO"
+      },
+      "paymentDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "description": "Идентификатор ученика",
+            "format": "bigint",
+            "readOnly": true,
+            "example": 1
+          },
+          "creationDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Дата создания",
+            "example": "2024-01-01"
+          },
+          "sum": {
+            "type": "number",
+            "description": "Сумма",
+            "format": "float",
+            "example": 500.50
+          },
+          "status": {
+            "type": "string",
+            "description": "Статус",
+            "example": "Новая"
+          },
+          "studentName": {
+            "type": "string",
+            "description": "Имя ученика",
+            "example": "Богдан Исаченко"
+          },
+          "courseName": {
+            "type": "string",
+            "description": "Курс",
+            "example": "Python Start"
+          },
+          "creatorName": {
+            "type": "string",
+            "description": "Создатель",
+            "example": "Богдан Исаченко"
+          }
+        },
+        "description": "Курс DTO"
+      }
+    }
+  }
+}
