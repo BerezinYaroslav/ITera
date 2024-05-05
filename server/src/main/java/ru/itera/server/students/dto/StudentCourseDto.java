@@ -1,6 +1,7 @@
 package ru.itera.server.students.dto;
 
-import lombok.*;
+import lombok.Builder;
+import lombok.Data;
 
 import java.time.LocalDate;
 

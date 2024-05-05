@@ -53,6 +53,7 @@ public class CourseServiceImpl implements CourseService {
             coursesDto.add(CourseDto.builder()
                     .id(course.getId())
                     .name(course.getName())
+                    .classesCount(12)
                     .presentationUrl(course.getPresentationUrl())
                     .methodologyUrl(course.getMethodologyUrl())
                     .exercisesUrl(course.getExercisesUrl()).build());

@@ -17,7 +17,7 @@ values ('Кирилл Ватуев', '2003-01-01', current_timestamp(), false),
 
 insert into student_course (group_name, student_id, course_id, teacher_id, mpp_id, curator_id, visited_classes_count,
                             classes_count, payed_classes_count, creation_date, is_deleted)
-values ('Питон 12-14 пробная', 1, 1, 1, 2, 2, 2, 10, 10, current_timestamp(), false);
+values ('Питон 12-14 пробная', 1, 1, 1, 2, 2, 2, 12, 10, current_timestamp(), false);
 
 insert into payment (sum, creation_date, is_deleted, student_id, creator_id)
 values (2000.50, current_timestamp(), false, 1, 2),

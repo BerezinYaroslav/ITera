@@ -15,6 +15,7 @@ public interface EmployeeService {
     void add(Employee employee);
 
     List<Employee> getAll();
+
     List<EmployeeDto> getAllDto();
 
     Employee getById(Long id) throws Exception;

@@ -58,7 +58,7 @@ create table course
 create table student
 (
     id               bigint generated always as identity primary key,
-    name             nvarchar(50) unique not null,
+    name             nvarchar(50) not null,
     creation_date    date,
     birthday         date,
     last_update_date date,

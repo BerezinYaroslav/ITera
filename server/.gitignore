@@ -35,4 +35,5 @@ build/
 ### Extra Spring Files ###
 mvnw
 mvnw.cmd
-!.mvn
+.mvn
+.DS_Store
