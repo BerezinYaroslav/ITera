@@ -1,9 +1,9 @@
 # Web-приложение ITera
 
 ## Команда
-* [Березин Ярослав](https://github.com/BerezinYaroslav) - Backend & DataBase Developer
-* [Исаченко Богдан](https://github.com/AlataO) - Frontend Developer
-* [Савенкова Александра](https://github.com/SavenkovaAV) - Frontend Developer, Designer & QA
+* Березин Ярослав [GitHub](https://github.com/BerezinYaroslav) [Tg](https://t.me/berezin_yaroslav) - Backend & DataBase Developer
+* Исаченко Богдан [GitHub](https://github.com/Doctorian-Bogdan) [Tg](https://t.me/doctorian) - Frontend Developer
+* Анна Сафонова [Tg](https://t.me/don_karnagee) - Designer
 
 ## Тема
 Приложение для создания и управления личными или профессиональными целями, с напоминаниями и отслеживанием прогресса.
