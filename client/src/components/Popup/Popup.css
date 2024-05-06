@@ -1,0 +1,192 @@
+.popup {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(152, 102, 232, 0.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.popup_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup__container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 45px 45px 40px 45px;
+  border-radius: 20px;
+  position: relative;
+  min-width: 700px;
+}
+
+.popup__button-back {
+  position: absolute;
+  left: 15px;
+  top: -50px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.popup__button-close {
+  position: absolute;
+  right: 15px;
+  top: -50px;
+  display: flex;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.popup__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.popup__title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  color: #474747;
+}
+
+.popup__progressline {
+  width: 232px;
+  height: 9px;
+  background-color: #E2FFF3;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.popup__progress {
+  width: 33%;
+  height: 100%;
+  background-color: #40997E;
+}
+
+.popup__form {
+  display: flex;
+  overflow: hidden;
+  width: 610px;
+}
+
+.popup__form-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.popup__form-item_addresses {
+  transform: translateX(-610px);
+}
+
+.popup__form-item_roles {
+  transform: translateX(-1220px);
+}
+
+.popup__form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.popup__input {
+  height: 50px;
+  border: 1px solid #E9E9E9;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 0 30px 0 60px;
+  transition: 0.3s;
+  width: 610px;
+  background: no-repeat 20px center;
+}
+
+.popup__input:focus {
+  outline: none;
+  border: 1px solid #8147E7;
+}
+
+.popup__input::placeholder {
+  color: #AFAFAF;
+}
+
+.popup__input_name {
+  background-image: url("../../images/people.svg");
+}
+
+.popup__input_spec {
+  background-image: url("../../images/student.svg");
+}
+
+.popup__input_stud {
+  background-image: url("../../images/hat.svg");
+}
+
+.popup__input_tel {
+  background-image: url("../../images/phone.svg");
+  width: 295px;
+}
+
+.popup__input_email {
+  background-image: url("../../images/mail.svg");
+}
+
+.popup__input_date {
+  background-image: url("../../images/cake.svg");
+}
+
+.popup__input_address {
+  padding: 0 10px 0 20px;
+}
+
+.popup__input_city {
+  width: 150px;
+  padding: 0 10px 0 20px;
+}
+
+.popup__numbers {
+  display: flex;
+  gap: 20px;
+}
+
+.popup__button-form {
+  background-color: #9747FF;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  height: 50px;
+  cursor: pointer;
+}
+
+.popup__text {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #474747;
+}
+
+.popup__addresses {
+  display: flex;
+  gap: 10px;
+}
+
+

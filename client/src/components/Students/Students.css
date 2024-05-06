@@ -1,0 +1,102 @@
+.students {
+  width: 100%;
+}
+
+.students__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 40px 0 30px 0;
+}
+
+.students__title {
+  margin: 0;
+  color: #3C3C3C;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.students__buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.student__button {
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.student__button_filter {
+  color: #8147E7;
+  background: #EADDFF;
+}
+
+.student__button_filter:hover {
+  background: #d3bbf4;
+}
+
+.student__button_export {
+  background: #20744A;
+}
+
+.student__button_export:hover {
+  background: #438169;
+}
+
+.student__button_add {
+  background: #8147E7;
+}
+
+.student__button_add:hover {
+  background: #a076ea;
+}
+
+.students__content {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.students__line {
+  display: flex;
+  align-items: center;
+  padding: 0 20px 10px 20px;
+  box-sizing: border-box;
+  color: #878787;
+}
+
+.students__num {
+  width: 10%;
+}
+
+.students__name {
+  width: 25%;
+}
+
+.students__birth {
+  width: 20%;
+}
+
+.students__course {
+  width: 15%;
+}
+
+.students__date {
+  width: 15%;
+}
+
+.students__debt {
+  width: 15%;
+}

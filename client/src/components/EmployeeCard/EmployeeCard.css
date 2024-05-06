@@ -1,0 +1,122 @@
+.employee-card {
+  box-shadow: rgba(57, 80, 126, 0.14) 0 4px 4px 0;
+  box-sizing: border-box;
+  padding: 15px 15px 30px 15px;
+  border-radius: 10px;
+  min-width: 346px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.employee-card:hover {
+  box-shadow: #8147E7 0 4px 4px 0;
+}
+
+.employee-card__bio {
+  display: flex;
+  gap: 12px;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+  border-bottom: 1px #EFEFEF solid;
+}
+
+.employee-card__bio_id {
+  border: none;
+}
+
+.employee-card__image {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+}
+
+.employee-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.employee-card__name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.employee-card__position {
+  color: #8A8A8A;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.employee-card__status {
+  background-color: #E3FFF3;
+  padding: 6px 6px 6px 24px;
+  border-radius: 5px;
+  color: #2E8760;
+  font-size: 14px;
+  position: relative;
+}
+
+.employee-card__status::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #2E8760;
+  border-radius: 50%;
+  position: absolute;
+  left: 7px;
+  top: calc(50% - 5px);
+}
+
+.employee-card__visit {
+  margin: 0;
+  color: #2E8760;
+  font-size: 14px;
+}
+
+.employee-card__additional-info {
+  box-sizing: border-box;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.employee-card__text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.employee-card__icon {
+  width: 32px;
+  height: 32px;
+  background-color: #EFEFEF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.employee-card__icon_purple {
+  width: 32px;
+  height: 32px;
+  background-color: rgba(126, 57, 246, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.employee-card__inscription {
+  color: #8A8A8A;
+}
+
+.employee-card__inscription_highlighted {
+  color: #8147E7;
+}

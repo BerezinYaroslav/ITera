@@ -1,0 +1,127 @@
+.employee {
+  width: 100%;
+  color: #3C3C3C;
+}
+
+.employee__profile {
+
+}
+
+.employee__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.employee__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.employee__delete {
+  background: none;
+  border: 1px solid #FE0000;
+  border-radius: 7px;
+  padding: 10px 30px;
+  color: #FE0000;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.employee__delete:hover {
+  color: #fff;
+  background: #FE0000;
+}
+
+.employee__container {
+  box-sizing: border-box;
+  padding-top: 50px;
+  display: flex;
+}
+
+.employee__column {
+  width: 50%;
+}
+
+.employee__buttons {
+  padding: 60px 0 15px 15px;
+  border-bottom: 1px solid #E4E4E4;
+}
+
+.employee__nav {
+  display: flex;
+  gap: 25px;
+}
+
+.employee__button {
+  color: #9A9A9A;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}
+
+.employee__button::before {
+  content: '';
+  display: block;
+  background: #9747FF;
+  width: 0;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: -16px;
+  transition: 0.3s;
+}
+
+.employee__button_active {
+  color: #9747FF;
+}
+
+.employee__button_active::before {
+  width: 100%;
+}
+
+.employee__button:hover {
+  color: #9747FF;
+}
+
+.employee__button:hover::before {
+  width: 100%;
+}
+
+.employee__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 25px 0;
+}
+
+.employee__text-block {
+
+}
+
+.employee__subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+.employee__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.employee__text {
+  color: #434343;
+  margin: 0;
+}
+
+.employee__text_highlighted {
+  font-weight: 600;
+}

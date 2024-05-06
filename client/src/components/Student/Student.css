@@ -1,0 +1,53 @@
+.student {
+  display: flex;
+  align-items: center;
+  border: 1px solid #E1E1E1;
+  box-sizing: border-box;
+  padding: 30px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+  color: #3C3C3C;
+}
+
+.student:hover {
+  border: 1px solid #8147E7;
+}
+
+.student__num {
+  width: 10%;
+}
+
+.student__name {
+  width: 25%;
+}
+
+.student__birth {
+  width: 20%;
+}
+
+.student__course {
+  width: 15%;
+}
+
+.student__date {
+  width: 15%;
+}
+
+.student__debt {
+  width: 15%;
+}
+
+.student__debt-true {
+  color: #2E8760;
+  background-color: #E3FFF3;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+.student__debt-false {
+  color: #EB4335;
+  background-color: #FFECEC;
+  padding: 5px 20px;
+  border-radius: 5px;
+}

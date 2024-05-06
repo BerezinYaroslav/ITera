@@ -1,0 +1,63 @@
+.payment-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #E1E1E1;
+  box-sizing: border-box;
+  padding: 20px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+  color: #3C3C3C;
+}
+
+.payment-card:hover {
+  border: 1px solid #8147E7;
+}
+
+.payment-card__id {
+  width: 5%;
+}
+
+.payment-card__date {
+  width: 10%;
+}
+
+.payment-card__sum {
+  width: 15%;
+}
+
+.payment-card__lessons {
+  width: 10%;
+}
+
+.payment-card__status {
+  width: 10%;
+  box-sizing: border-box;
+  padding-right: 5px;
+}
+
+.payment-card__status_paid {
+  color: #2E8760;
+  background-color: #E3FFF3;
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+
+.payment-card__status_new {
+  color: #3D70F5;
+  background-color: rgba(90, 129, 254, 0.25);
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+
+.payment-card__name {
+  width: 15%;
+}
+
+.payment-card__course {
+  width: 20%;
+}
+
+.payment-card__resp {
+  width: 15%;
+}

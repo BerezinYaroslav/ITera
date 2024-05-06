@@ -1,0 +1,52 @@
+.course-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #E1E1E1;
+  box-sizing: border-box;
+  padding: 30px 40px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+  color: #3C3C3C;
+}
+
+.course-card:hover {
+  border: 1px solid #8147E7;
+}
+
+.course-card__num {
+  width: 10%;
+}
+
+.course-card__course {
+  width: 20%;
+  box-sizing: border-box;
+  padding-right: 10px;
+}
+
+.course-card__teacher {
+  width: 20%;
+}
+
+.course-card__lessons {
+  width: 15%;
+}
+
+.course-card__paid {
+  width: 10%;
+}
+
+.course-card__date {
+  width: 15%;
+}
+
+.course-card__status {
+  width: 10%;
+}
+
+.course-card__status-item {
+  color: #2E8760;
+  background-color: #E3FFF3;
+  padding: 5px 10px;
+  border-radius: 5px;
+}

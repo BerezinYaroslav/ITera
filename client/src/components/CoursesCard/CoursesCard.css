@@ -1,0 +1,50 @@
+.courses-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #E1E1E1;
+  box-sizing: border-box;
+  padding: 20px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+  color: #3C3C3C;
+}
+
+.courses-card:hover {
+  border: 1px solid #8147E7;
+}
+
+.courses-card__id {
+  width: 10%;
+}
+
+.courses-card__name {
+  width: 30%;
+}
+
+.courses-card__lessons {
+  width: 20%;
+}
+
+.courses-card__presentation {
+  width: 15%;
+}
+
+.courses-card__methodology {
+  width: 15%;
+}
+
+.courses-card__excersises {
+  width: 10%;
+}
+
+.courses-card__link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #3C3C3C;
+  transition: 0.3s;
+}
+
+.courses-card__link:hover {
+  color: #8147E7;
+}
