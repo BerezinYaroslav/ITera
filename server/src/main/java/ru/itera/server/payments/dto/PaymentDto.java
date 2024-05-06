@@ -17,6 +17,7 @@ public class PaymentDto {
     private LocalDate creationDate;
     private Double sum;
     private String status;
+    private Integer classesToPay;
     private String studentName;
     private String courseName;
     private String creatorName;

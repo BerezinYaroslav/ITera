@@ -61,6 +61,7 @@ public class PaymentServiceImpl implements PaymentService {
 
             paymentsDto.add(PaymentDto.builder()
                     .id(payment.getId())
+                    .classesToPay((int)(payment.getSum() / 1000))
                     .creationDate(payment.getCreationDate())
                     .sum(payment.getSum())
                     .status(payment.getIsDeleted() ? "Оплачен" : "Новый")

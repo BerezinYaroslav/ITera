@@ -812,6 +812,12 @@
             "format": "float",
             "example": 500.50
           },
+          "classesToPay": {
+            "type": "number",
+            "description": "Количество выставленных к оплате уроков",
+            "format": "int64",
+            "example": 1
+          },
           "status": {
             "type": "string",
             "description": "Статус",
