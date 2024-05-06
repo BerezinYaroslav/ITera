@@ -22,8 +22,6 @@
 ![Добавление сотрудника 3](https://github.com/BerezinYaroslav/ITera/blob/master/img/employees_add_3.jpeg)
 ![Добавление сотрудника 4](https://github.com/BerezinYaroslav/ITera/blob/master/img/employees_add_4.jpeg)
 ![Добавление сотрудника 5](https://github.com/BerezinYaroslav/ITera/blob/master/img/employees_add_5.jpeg)
-![Отмена добавления сотрудника](https://github.com/BerezinYaroslav/ITera/blob/master/img/employees_add_cancel.jpeg)
-![Сотрудник добавлен](https://github.com/BerezinYaroslav/ITera/blob/master/img/employees_add_ok.jpeg)
 ![Оплаты](https://github.com/BerezinYaroslav/ITera/blob/master/img/payments.jpeg)
 ![Ученики](https://github.com/BerezinYaroslav/ITera/blob/master/img/students.jpeg)
 ![Курсы ученика](https://github.com/BerezinYaroslav/ITera/blob/master/img/students_courses.jpeg)
