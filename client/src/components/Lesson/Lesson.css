@@ -1,0 +1,46 @@
+.lesson {
+  display: flex;
+  gap: 15px;
+  box-sizing: border-box;
+  border: 1px solid #3C3C3C;
+  max-width: 500px;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.lesson__num {
+  font-size: 25px;
+}
+
+.lesson__header {
+  font-size: 25px;
+  margin: 0;
+  font-weight: 600;
+  color: #8147E7;
+}
+
+.lesson__links {
+  display: flex;
+  gap: 20px;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+.lesson__column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 250px;
+}
+
+.lesson__link {
+  color: #3C3C3C;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.lesson__link:hover {
+  color: #8147E7;
+}

@@ -1,0 +1,13 @@
+.course-page {
+  width: 100%;
+  color: #3C3C3C;
+}
+
+.course-page__content {
+  box-sizing: border-box;
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}

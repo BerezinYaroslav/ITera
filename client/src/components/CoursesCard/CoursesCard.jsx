@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function CoursesCard({ data }) {
   return (
-    <div className="courses-card">
+    <Link to={`/courses/${data.id}`} className="courses-card">
       <div className="courses-card__id">
         {data.id}
       </div>
@@ -21,7 +22,7 @@ function CoursesCard({ data }) {
       <a href={data.exercisesUrl || 'https://google.com'} target="_blank" className="courses-card__excersises courses-card__link">
         Задания
       </a>
-    </div>
+    </Link>
   );
 }
 
