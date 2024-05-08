@@ -2,21 +2,33 @@
   display: flex;
   gap: 15px;
   box-sizing: border-box;
-  border: 1px solid #3C3C3C;
-  max-width: 500px;
-  padding: 15px;
-  border-radius: 20px;
+  border-bottom: 1px solid #E1E1E1;
+  padding: 15px 15px 15px 100px;
 }
 
 .lesson__num {
   font-size: 25px;
+  box-sizing: border-box;
+  padding-top: 4px;
+}
+
+.lesson__name {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
 .lesson__header {
   font-size: 25px;
   margin: 0;
-  font-weight: 600;
-  color: #8147E7;
+  color: #3C3C3C;
+  padding: 5px 10px;
+  border: none;
+  max-width: 300px;
+}
+
+.lesson__header:focus {
+  outline: none;
 }
 
 .lesson__links {
@@ -26,19 +38,21 @@
   padding-top: 20px;
 }
 
-.lesson__column {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  min-width: 250px;
-}
-
 .lesson__link {
   color: #3C3C3C;
   text-decoration: none;
   transition: 0.3s;
-  font-weight: 500;
   font-size: 20px;
+  max-width: 200px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: left;
+  cursor: pointer;
+}
+
+.lesson__link_active {
+  font-weight: 500;
 }
 
 .lesson__link:hover {

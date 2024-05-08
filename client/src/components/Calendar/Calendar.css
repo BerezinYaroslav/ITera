@@ -3,12 +3,75 @@
   color: #3C3C3C;
 }
 
-.calendar__title {
-  margin: 0;
+.calendar__header {
   box-sizing: border-box;
   padding: 40px 0 30px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.calendar__title {
+  margin: 0;
   font-size: 24px;
   font-weight: 600;
+}
+
+.calendar__btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #AFAFAF;
+  background: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 5px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+.calendar__btn:hover {
+  border: 1px solid #8147E7;
+}
+
+.calendar__btn-popup {
+  position: absolute;
+  left: -15px;
+  top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: rgba(62, 25, 133, 0.36) 0 0 4px 1px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.calendar__btn-popup_active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.calendar__btn-item {
+  color: #AFAFAF;
+  padding: 5px 20px;
+  background-color: #F6F6F6;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.calendar__btn-item:hover {
+  background: #8147E7;
+  color: #fff;
+}
+
+.calendar__btn-item_active {
+  background: #8147E7;
+  color: #fff;
 }
 
 .calendar__img {

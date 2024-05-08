@@ -57,7 +57,7 @@ function Employee() {
                   </svg>
                 </div>
                 <div className="employee-card__inscription">
-                  Добавлена
+                  Добавлен(-а)
                   {' '}
                   {employee.creationDate}
                 </div>
@@ -142,7 +142,7 @@ function Employee() {
               {' '}
               :
               {' '}
-              {employee.education}
+              Высшее
             </p>
             <p className="employee__text">
               <span className="employee__text_highlighted">Наименование учебного заведения</span>

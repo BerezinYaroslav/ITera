@@ -7,7 +7,44 @@
   box-sizing: border-box;
   padding-top: 50px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
   justify-content: center;
+}
+
+.course-page__title {
+  font-weight: 600;
+  margin: 0;
+  font-size: 24px;
+  background: none;
+  min-width: 0;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  max-width: 200px;
+  width: 100%;
+}
+
+.course-page__title:focus {
+  outline: none;
+}
+
+.course-page__title_edit {
+  border: 2px solid #8147E7;
+  border-radius: 5px;
+}
+
+.course-page__button {
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  transition: 0.3s;
+}
+
+.course-page__button:hover {
+  opacity: 0.5;
 }

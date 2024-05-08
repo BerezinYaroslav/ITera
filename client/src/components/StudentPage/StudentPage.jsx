@@ -25,7 +25,7 @@ function StudentPage() {
             <path d="M8 16L0 8L8 0L9.425 1.4L3.825 7H16V9H3.825L9.425 14.6L8 16Z" fill="black" />
           </svg>
         </Link>
-        Профиль сотрудника
+        Профиль ученика
       </div>
       <div className="student-page__profile">
         <img src={avatar} alt="фотография ученика" className="student-page__img" />
